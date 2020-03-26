@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     end
 
     def create
-        comment = Comment.create(user_id: 9, recipe_id: params[:recipe_id], content: params[:content])
+        comment = Comment.create(user_id: 34, recipe_id: params[:recipe_id], content: params[:content])
         render json: comment.to_json()
     end
 

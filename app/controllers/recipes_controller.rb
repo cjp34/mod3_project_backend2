@@ -21,7 +21,7 @@ class RecipesController < ApplicationController
     end
 
     def create
-        recipe = Recipe.create(user_id: 9, name: params[:name], hours: params[:hours], minutes: params[:minutes], feeds: params[:feeds], directions: params[:directions])
+        recipe = Recipe.create(user_id: 34, name: params[:name], hours: params[:hours], minutes: params[:minutes], feeds: params[:feeds], directions: params[:directions])
         render json: recipe.to_json(
             :include => {:recipe_ingredients => {:except => [:created_at, :updated_at]},
                           :comments => {:except => [:created_at, :updated_at]},
